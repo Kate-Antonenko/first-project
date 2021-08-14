@@ -141,30 +141,6 @@ body {
   }
 }
 
-.img-print-text {
-  display: contents;
-  width: 248px;
-  height: 23px;
-  font-family: Cera Pro;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.27;
-  text-align: center;
-  color: #487996;
-}
-
-@media screen and (min-width: 1440px) {
-  .img-print-text {
-    font-size: 18px;
-  }
-}
-
-.img-first {
-  background-image: url(../images/print/desktop/pic-1.jpg);
-  background-size: cover;
-}
-
 .list-print {
   display: flex;
   flex-wrap: wrap;
@@ -172,29 +148,8 @@ body {
   margin-top: -15px;
 }
 
-/* .desc-item::before {
-  content: '';
-  display: block;
-  height: 120px;
-  background-size: 70px 70px;
-  background-color: #f5f4fa;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 30px;
-}
-.icon-antenna::before {
-  background-image: url(../images/antenna.svg);
-}
-.icon-clock::before {
-  background-image: url(../images/clock.svg);
-}
-.icon-diagram::before {
-  background-image: url(../images/diagram.svg);
-}
-.icon-astronaut::before {
-  background-image: url(../images/astronaut.svg);
-} */
 .img-print {
+  position: relative;
   width: 133px;
   height: 158.54px;
   background: #ffffff;
@@ -222,6 +177,31 @@ body {
   }
 }
 
+.img-card::before {
+  position: absolute;
+  background-image: url(../images/print/desktop/pic-1);
+}
+
+.img-print-text {
+  display: contents;
+  width: 248px;
+  height: 23px;
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.27;
+  text-align: center;
+  color: #487996;
+}
+
+@media screen and (min-width: 1440px) {
+  .img-print-text {
+    font-size: 18px;
+  }
+}
+
+/*--------ДРУГА ЧАСТИНА--------*/
 .item-print {
   display: block;
 }
@@ -276,7 +256,8 @@ body {
   border-radius: 30.5px;
 }
 
-.icon-print-style {
+.img-print-style {
+  filter: drop-shadow(20px 20px 80px rgba(0, 0, 0, 0.25));
   border-radius: 50px 0px;
 }
 
