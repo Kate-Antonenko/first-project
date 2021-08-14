@@ -1,0 +1,185 @@
+/* .section {
+  width: 360px;
+} */
+.title-h2 {
+  font-family: Cera Pro;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1.25;
+
+  color: #487996;
+
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 48px;
+  }
+}
+
+.img-print-text {
+  display: contents;
+  width: 248px;
+  height: 23px;
+
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.27;
+
+  text-align: center;
+
+  color: #487996;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 18px;
+  }
+}
+.img-first {
+  background-image: url(../images/print/desktop/pic-1.jpg);
+  background-size: cover;
+}
+
+.list-print {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-top: -15px;
+}
+// .pic-print {
+//   align-items: center;
+// }
+
+.img-print {
+  width: 133px;
+  height: 158.54px;
+  background: #ffffff;
+  opacity: 0.8;
+  box-shadow: inset 1px 1px 16px rgba(203, 203, 203, 0.8), inset -1px -1px 16px #ffffff;
+  border-radius: 50px 0px;
+
+  margin-left: 15px;
+  margin-top: 15px;
+
+  flex-basis: calc((100% - 30px) / 2);
+
+  @media screen and (min-width: 768px) {
+    width: 152.4px;
+    height: 181.66px;
+    flex-wrap: nowrap;
+    flex-basis: calc((100% - 60px) / 4);
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 250px;
+    height: 298px;
+  }
+}
+
+.item-print {
+  display: block;
+}
+.item-print:not(:last-child) {
+  margin-bottom: 52px;
+}
+
+.item-print-text {
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #2b2b2b;
+  margin-bottom: 16px;
+}
+.item-print-text-current {
+  width: 280px;
+  height: 80px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: #487996;
+  text-transform: uppercase;
+}
+
+.item-print-text:first-of-type {
+  margin-top: 16px;
+}
+.item-print-text:last-of-type {
+  margin-bottom: 24px;
+}
+
+.btn-print {
+  display: inline-block;
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: 700;
+  /* font-size: 16px; має бути 16!!!! */
+  font-size: 15px;
+  line-height: 1.5;
+
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #487996;
+
+  padding: 16px 32px;
+  background: #f5f5fa;
+  box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px rgba(72, 121, 150, 0.1),
+    5px 5px 10px rgba(72, 121, 150, 0.25), -5px -5px 10px #ffffff;
+  border-radius: 30.5px;
+}
+.img-print {
+  // filter: drop-shadow(20px 20px 80px rgba(0, 0, 0, 0.25));
+  border-radius: 50px 0px;
+}
+@media screen and (min-width: 768px) {
+  .item-print {
+    display: flex;
+  }
+  .icon-print {
+    width: 100%;
+    height: 100%;
+    margin-right: 20px;
+  }
+  .btn-print {
+    display: inline-flex;
+    margin-top: 52px;
+    margin-top: 0;
+  }
+  .item-print-text:first-of-type {
+    margin-top: 0;
+  }
+  .print-text-wrapper {
+    margin-top: 0;
+  }
+  .item-print-text:last-of-type {
+    margin-bottom: 52px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .icon-print {
+    margin-right: 78px;
+  }
+  .btn-print {
+    display: inline-flex;
+    margin-top: 52px;
+    margin-top: 0;
+  }
+  .item-print-text:first-of-type {
+    margin-top: 0;
+  }
+  .print-text-wrapper {
+    margin-top: 0;
+  }
+  .item-print-text:last-of-type {
+    margin-bottom: 52px;
+  }
+}
