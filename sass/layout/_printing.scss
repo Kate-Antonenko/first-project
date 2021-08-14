@@ -39,10 +39,6 @@
     font-size: 18px;
   }
 }
-.img-first {
-  background-image: url(../images/print/desktop/pic-1.jpg);
-  background-size: cover;
-}
 
 .list-print {
   display: flex;
@@ -50,11 +46,10 @@
   margin-left: -15px;
   margin-top: -15px;
 }
-// .pic-print {
-//   align-items: center;
-// }
 
-.img-print {
+
+.img-print::before {
+  content: '';
   width: 133px;
   height: 158.54px;
   background: #ffffff;
@@ -67,17 +62,25 @@
 
   flex-basis: calc((100% - 30px) / 2);
 
-  @media screen and (min-width: 768px) {
-    width: 152.4px;
-    height: 181.66px;
-    flex-wrap: nowrap;
-    flex-basis: calc((100% - 60px) / 4);
-  }
 
-  @media screen and (min-width: 1440px) {
-    width: 250px;
-    height: 298px;
-  }
+}
+.img-first {
+  background-image: url(../images/print/desktop/pic-1.jpg);
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .img-print {
+  width: 152.4px;
+  height: 181.66px;
+  flex-wrap: nowrap;
+  flex-basis: calc((100% - 60px) / 4);
+}
+
+@media screen and (min-width: 1440px) {
+    .img-print {
+  width: 250px;
+  height: 298px;
+}
 }
 
 .item-print {
@@ -136,10 +139,11 @@
     5px 5px 10px rgba(72, 121, 150, 0.25), -5px -5px 10px #ffffff;
   border-radius: 30.5px;
 }
-.img-print {
+.icon-print-style {
   // filter: drop-shadow(20px 20px 80px rgba(0, 0, 0, 0.25));
   border-radius: 50px 0px;
 }
+
 @media screen and (min-width: 768px) {
   .item-print {
     display: flex;
