@@ -37,7 +37,6 @@ ol {
 
 img {
   display: block;
-  max-width: 100%;
   height: auto;
 }
 
@@ -141,56 +140,152 @@ body {
   }
 }
 
-.list-print {
+.tile-set {
   display: flex;
   flex-wrap: wrap;
   margin-left: -15px;
   margin-top: -15px;
-}
-
-.img-print {
-  position: relative;
-  width: 133px;
-  height: 158.54px;
-  background: #ffffff;
-  opacity: 0.8;
-  box-shadow: inset 1px 1px 16px rgba(203, 203, 203, 0.8), inset -1px -1px 16px #ffffff;
-  border-radius: 50px 0px;
-  margin-left: 15px;
-  margin-top: 15px;
+  margin-bottom: 52px;
   flex-basis: calc((100% - 30px) / 2);
 }
 
 @media screen and (min-width: 768px) {
-  .img-print {
-    width: 152.4px;
-    height: 181.66px;
-    flex-wrap: nowrap;
+  .tile-set {
     flex-basis: calc((100% - 60px) / 4);
+    flex-wrap: nowrap;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .img-print {
+  .tile-set {
+    flex-basis: calc((100% - 60px) / 4);
+    margin-bottom: 100px;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 132px;
+  height: 158px;
+  margin-left: 15px;
+  margin-top: 15px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: inset 1px 1px 16px rgba(203, 203, 203, 0.8), inset -1px -1px 16px #ffffff;
+  border-radius: 50px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .tile {
+    width: 152px;
+    height: 181px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .tile {
     width: 250px;
     height: 298px;
   }
 }
 
-.img-card::before {
-  position: absolute;
-  background-image: url(../images/print/desktop/pic-1);
+.tile::before {
+  content: '';
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+.img-prototype::before {
+  background-image: url("../images/print/desktop/pic-1.jpg");
+  width: 92px;
+  height: 75px;
+}
+
+@media screen and (min-width: 768px) {
+  .img-prototype::before {
+    width: 105px;
+    height: 85px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .img-prototype::before {
+    width: 173px;
+    height: 140px;
+  }
+}
+
+.img-makets::before {
+  background-image: url("../images/print/desktop/pic-2.jpg");
+  width: 102px;
+  height: 63px;
+}
+
+@media screen and (min-width: 768px) {
+  .img-makets::before {
+    width: 118px;
+    height: 73px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .img-makets::before {
+    width: 194px;
+    height: 120px;
+  }
+}
+
+.img-dekor::before {
+  background-image: url("../images/print/desktop/pic-3.jpg");
+  width: 44px;
+  height: 71px;
+}
+
+@media screen and (min-width: 768px) {
+  .img-dekor::before {
+    width: 50px;
+    height: 81px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .img-dekor::before {
+    width: 83px;
+    height: 133px;
+  }
+}
+
+.img-design::before {
+  background-image: url("../images/print/desktop/pic-4.jpg");
+  width: 85px;
+  height: 85px;
+}
+
+@media screen and (min-width: 768px) {
+  .img-design::before {
+    width: 98px;
+    height: 98px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .img-design::before {
+    width: 161px;
+    height: 161px;
+  }
 }
 
 .img-print-text {
-  display: contents;
-  width: 248px;
-  height: 23px;
   font-family: Cera Pro;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 1.27;
+  line-height: 1.25;
   text-align: center;
   color: #487996;
 }
@@ -257,7 +352,7 @@ body {
 }
 
 .img-print-style {
-  filter: drop-shadow(20px 20px 80px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.25));
   border-radius: 50px 0px;
 }
 
@@ -267,7 +362,6 @@ body {
   }
   .icon-print {
     width: 100%;
-    height: 100%;
     margin-right: 20px;
   }
   .btn-print {
@@ -280,6 +374,7 @@ body {
   }
   .print-text-wrapper {
     margin-top: 0;
+    width: 1000px;
   }
   .item-print-text:last-of-type {
     margin-bottom: 52px;
@@ -289,6 +384,7 @@ body {
 @media screen and (min-width: 1440px) {
   .icon-print {
     margin-right: 78px;
+    width: 250px;
   }
   .btn-print {
     display: inline-flex;
@@ -303,6 +399,10 @@ body {
   }
   .item-print-text:last-of-type {
     margin-bottom: 52px;
+  }
+  .item-print-text {
+    font-size: 18px;
+    line-height: 1.27;
   }
 }
 /*# sourceMappingURL=main.css.map */
