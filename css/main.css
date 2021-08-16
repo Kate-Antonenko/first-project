@@ -118,6 +118,24 @@ body {
 /* .section {
   width: 360px;
 } */
+.container-print {
+  background-image: url("../images/print/mobile/decor-print-mobile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .container-print {
+    background-image: url("../images/print/tablet/decor-print-tablet.png");
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container-print {
+    background-image: url("../images/print/desktop/decor-print-desktop.png");
+  }
+}
+
 .title-h2 {
   font-family: Cera Pro;
   font-style: normal;
